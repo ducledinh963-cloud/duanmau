@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: #16a34a; /* Green (màu xanh lá) */
+    --primary-hover: #15803d; /* Darker green on hover */
+    --dark-color: #0f172a; /* Sleek dark slate */
+    --light-color: #f0fdf4; /* Ultra light green tinted background */
+    --text-color: #1e293b;
+    --border-color: #d1fae5; /* Green tinted border */
+    --success-color: #22c55e; /* Vibrant success green */
+    --info-color: #059669; /* Distinct emerald green for info and search buttons */
+    --danger-color: #ef4444;
+    --warning-color: #eab308;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* --- ADMIN HEADER --- */
+.admin-header {
+    background-color: var(--primary-color); /* Green background */
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.admin-title h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+}
+
+.admin-title span {
+    color: #fef08a; /* Bright yellow/gold for ADMIN to stand out */
+}
+
+.admin-nav {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+.admin-nav a {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #f0fdf4; /* Off-white green tinted text */
+    transition: all 0.25s ease;
+}
+
+.admin-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.admin-nav li.active a {
+    background-color: white;
+    color: var(--primary-color); /* Green text on white background */
+}
+
+.nav-link-client {
+    color: #fef08a !important; /* Gold text */
+}
+
+.nav-link-client:hover {
+    background-color: rgba(254, 240, 138, 0.15) !important;
+    color: white !important;
+}
+
+.nav-link-logout {
+    color: #fee2e2 !important; /* Soft red text */
+}
+
+.nav-link-logout:hover {
+    background-color: rgba(239, 68, 68, 0.2) !important;
+    color: white !important;
+}
+
+/* --- CONTAINER & CARD --- */
+.admin-container {
+    padding: 30px 5%;
+}
+
+.admin-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--light-color);
+    padding-bottom: 15px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-info {
+    background-color: var(--info-color);
+    color: white;
+}
+
+.btn-info:hover {
+    opacity: 0.9;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn-danger:hover {
+    opacity: 0.9;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+
+/* --- TABLES --- */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.admin-table th {
+    background-color: #f1f5f9;
+    color: var(--dark-color);
+    padding: 14px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.admin-table td {
+    padding: 14px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.thumb-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+/* --- ADMIN FORMS --- */
+.admin-form-group {
+    margin-bottom: 20px;
+}
+
+.admin-form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--dark-color);
+}
+
+.admin-form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.admin-form-control:focus {
+    border-color: var(--primary-color);
+}
+
+select.admin-form-control {
+    background-color: white;
+}
+
+textarea.admin-form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* --- ALERTS --- */
+.admin-alert {
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.admin-alert-success {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.admin-alert-danger {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* --- ADMIN FOOTER --- */
+.admin-footer {
+    background-color: var(--primary-color); /* Green background matching header */
+    color: #f0fdf4; /* Off-white green tinted text for high contrast readability */
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.85rem;
+    margin-top: 50px;
+    border-top: 1px solid var(--primary-hover);
+}
